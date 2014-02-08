@@ -54,5 +54,7 @@ robot() {
     export ROS_MASTER_URI=http://$(rbhost $1):11311
 }
 
+export GH_DEFAULT_USER=pal-robotics
+
 alias r='cd $PAL_ROBOT_DIR'
 alias s='cd $PAL_STACKS_DIR'
