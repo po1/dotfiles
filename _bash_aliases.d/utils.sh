@@ -31,8 +31,8 @@ function gct()
     if [ -z "$path" ]; then local path=$(pwd)
     else local path=$(cd $1 && pwd); fi
     if [ -d $path/.git ]; then
-        ( cd $path && ctags -R --c++-kinds=+p --exclude='.git' --fields=+iaS \
-            --extra=+q -f .git/tags )
+        ( cd $path/.git && ctags -R --c++-kinds=+p --exclude='.git' --fields=+iaS \
+            --extra=+q -f tags ..)
     else
         if [ $path != $(dirname $path) ]; then
             gct $(dirname $path)
