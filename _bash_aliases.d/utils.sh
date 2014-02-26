@@ -1,7 +1,7 @@
 gh()
 {
-    local user
-    if [ -z "$GH_DEFAULT_USER" ]; then
+    local user=$GH_DEFAULT_USER
+    if [ -z "$user" ]; then
         user=po1
     fi
     if [ $# -gt 1 ]; then
