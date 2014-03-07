@@ -2,6 +2,11 @@
 complete -W 'local rh2 rh31 rh32 rc1' robot
 complete -W 'rh2 rh2m rh32 rh32m rc2 rc2m' srobot
 
+alias lazyCheckout='PAL_NO_CHECK_ENV=true $HOME/branches_svn/scm/bin/build/'\
+'checkoutUtils/checkoutAndBuild-AllModules.sh '\
+'$PAL_PROJECT_ROOT stacks robot local '\
+'--branch=$PAL_BRANCH_NAME $*'
+
 palenv() {
     case $1 in
         * )
@@ -50,11 +55,11 @@ srobot() {
     ssh $(rbuser $1)@$(rbhost $1)
 }
 
+export GH_DEFAULT_USER="pal-robotics"
+
 robot() {
     export ROS_MASTER_URI=http://$(rbhost $1):11311
 }
-
-export GH_DEFAULT_USER=pal-robotics
 
 alias r='cd $PAL_ROBOT_DIR'
 alias s='cd $PAL_STACKS_DIR'
