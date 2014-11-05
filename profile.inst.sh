@@ -14,3 +14,9 @@ check_and_set()
 
 check_and_set EDITOR vim
 check_and_set LANG "en_US.UTF-8"
+
+mkdir -p $HOME/bin
+
+if ! grep -q 'PATH=$HOME/bin:' ~/.profile; then
+    echo 'export PATH=$HOME/bin:$PATH' >> ~/.profile
+fi
