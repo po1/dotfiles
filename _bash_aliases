@@ -1,5 +1,0 @@
-if [ -d $HOME/.bash_aliases.d ]; then
-    for a in $HOME/.bash_aliases.d/*.sh; do
-        . $a
-    done
-fi
