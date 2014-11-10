@@ -90,7 +90,7 @@ colorscheme molokai
 
 map <leader>cf :lcd %:p:h<CR>
 
-map <leader>ss :Ack! -w <cfile> src<CR>
+map <leader>ss :Ack! -w '<cfile>' src<CR>
 
 set nowrap
 set hlsearch
