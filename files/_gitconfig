@@ -19,6 +19,9 @@
     unstage = reset HEAD
     uns = reset HEAD
 
+[push]
+    default = tracking
+
 [color]
     branch = auto
     diff = auto
