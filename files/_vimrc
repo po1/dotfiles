@@ -110,8 +110,6 @@ set undofile
 set colorcolumn=80,120
 set list listchars=tab:»·,trail:•
 
-set tags+=~/.tags
-
 set rnu
 autocmd InsertEnter * :set number
 autocmd InsertLeave * :set relativenumber

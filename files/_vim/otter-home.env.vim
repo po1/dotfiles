@@ -13,3 +13,5 @@ let mcp .= ":~/dev/otter-home/libs/*"
 let mcp .= ":~/dev/otter-home/bin/classes/"
 
 let g:syntastic_java_javac_classpath=mcp
+
+set tags+=~/.vim/otter-home.tags
