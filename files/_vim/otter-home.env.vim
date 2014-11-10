@@ -1,5 +1,6 @@
 call javacomplete#SetClassPath(''
             \ .':'.$HOME.'/dev/adt/sdk/platforms/android-19/android.jar'
+            \ .':'.$HOME.'/dev/adt/sdk/add-ons/addon-tablet_internal_sdk_addon-amazon-19/libs/tabletwidgets.jar'
             \ .':'.$HOME.'/dev/otter-home/libs/TabletSAU.jar'
             \ )
 
