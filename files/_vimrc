@@ -30,6 +30,8 @@ nmap <leader>tt :TagbarToggle<CR>
 Plugin 'scrooloose/nerdtree'
 map <leader>n :NERDTreeToggle<CR>
 
+Bundle 'mileszs/ack.vim'
+
 Plugin 'tpope/vim-surround'
 
 Plugin 'ervandew/supertab'
@@ -42,6 +44,8 @@ Plugin 'kien/ctrlp.vim'
 Plugin 'godlygeek/tabular'
 
 Plugin 'tomasr/molokai'
+
+Plugin 'airblade/vim-rooter'
 
 Plugin 'bling/vim-airline'
 set noshowmode
@@ -84,10 +88,15 @@ filetype plugin indent on    " required
 set t_Co=256
 colorscheme molokai
 
-set autochdir
+map <leader>cf :lcd %:p:h<CR>
+
+map <leader>ss :Ack! -w <cfile> src<CR>
 
 set nowrap
 set hlsearch
+set ignorecase
+set smartcase
+set incsearch
 
 set ai sw=4 ts=4 sta et
 autocmd FileType c,python,java setlocal fo=croql
