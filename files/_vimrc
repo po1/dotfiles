@@ -20,7 +20,7 @@ autocmd FileType java map <leader>b :call javacomplete#GoToDefinition()<CR>
 autocmd FileType java inoremap <buffer> . .<C-X><C-O>
 let g:nailgun_port='2113'
 
-Plugin 'airblade/vim-gitgutter'
+Plugin 'po1/vim-gitgutter'
 
 Plugin 'scrooloose/syntastic'
 
