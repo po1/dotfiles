@@ -112,6 +112,8 @@ set list listchars=tab:»·,trail:•
 
 autocmd FileType java setlocal colorcolumn=100
 
+set clipboard=unnamedplus
+
 set rnu
 autocmd InsertEnter * :set number
 autocmd InsertLeave * :set relativenumber
